@@ -59,7 +59,20 @@ hist(steps_by_day$total, breaks = 20, main = 'Fig.1. Total number of steps taken
 ```r
 # mean and median of the total number of steps taken per day
 mn <- mean(steps_by_day$total)
+mn
+```
+
+```
+## [1] 9354.23
+```
+
+```r
 med <- median(steps_by_day$total)
+med
+```
+
+```
+## [1] 10395
 ```
 
 The mean of total number of steps taken per day is **9354.23**, the median is **10395**.
@@ -77,6 +90,22 @@ plot(average ~ interval, data = steps_by_int, type = "l", xlab = 'Time interval'
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-4-1.png) 
+
+```r
+max(steps_by_int$average)
+```
+
+```
+## [1] 206.1698
+```
+
+```r
+with(steps_by_int, interval[which.max(average)])
+```
+
+```
+## [1] 835
+```
 
 The maximum average activity equals to **206.17** steps and is registered at the interval **835**.
 
@@ -122,7 +151,20 @@ hist(steps_by_day2$total, breaks = 20, xlab = 'Steps count',
 ```r
 # mean and median of the total number of steps taken per day
 mn2 <- mean(steps_by_day2$total)
+mn2
+```
+
+```
+## [1] 10766.19
+```
+
+```r
 med2 <- median(steps_by_day2$total)
+med2
+```
+
+```
+## [1] 10766.19
 ```
 
 The mean of total number of steps taken per day is **10766.19**, the median is **10766.19**.

@@ -49,7 +49,9 @@ hist(steps_by_day$total, breaks = 20, main = 'Fig.1. Total number of steps taken
      xlab = 'Steps count')
 # mean and median of the total number of steps taken per day
 mn <- mean(steps_by_day$total)
+mn
 med <- median(steps_by_day$total)
+med
 ```
 
 The mean of total number of steps taken per day is **`r format(mn)`**, the median is **`r format(med)`**.
@@ -63,6 +65,8 @@ steps_by_int <- select(df, steps, interval) %>% group_by(interval) %>%
 # Make a time series plot
 plot(average ~ interval, data = steps_by_int, type = "l", xlab = 'Time interval', 
      ylab = 'Average number of steps', main = 'Fig.2. The average daily activity plot')
+max(steps_by_int$average)
+with(steps_by_int, interval[which.max(average)])
 ```
 
 The maximum average activity equals to **`r round(max(steps_by_int$average), 2)`** steps and is registered at the interval **`r with(steps_by_int, interval[which.max(average)])`**.
@@ -96,7 +100,9 @@ hist(steps_by_day2$total, breaks = 20, xlab = 'Steps count',
     main = 'Fig.3. Total number of steps taken per day (NA replaced)')
 # mean and median of the total number of steps taken per day
 mn2 <- mean(steps_by_day2$total)
+mn2
 med2 <- median(steps_by_day2$total)
+med2
 ```
 
 The mean of total number of steps taken per day is **`r format(mn2)`**, the median is **`r format(med2)`**.
